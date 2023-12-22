@@ -4,6 +4,9 @@ import { MaxWidthContainer } from '@/components/ui/max-width-container'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { OffersList } from './_components/offers-list'
+import { SubHeading } from '@/components/sub-heading'
+import { Text } from '@/components/ui/text'
+import { StoryAlbum } from './_components/story-album'
 
 export const metadata: Metadata = {
   title: 'Toothache | Melhor instituto de dentistas',
@@ -54,22 +57,63 @@ export default function Home() {
 
       {/* Why to choose */}
       <MaxWidthContainer>
-        <Heading content="O que oferecemos" className="text-center" />
-
+        <div>
+          <SubHeading content="Nosso melhor" className="text-center" />
+          <Heading content="O que oferecemos" className="text-center" />
+        </div>
         <div className="mt-8">
           <OffersList />
         </div>
       </MaxWidthContainer>
 
       {/* Story */}
+      <div className="border-y border-border bg-muted flex items-center justify-center">
+        <MaxWidthContainer className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <div>
+              <SubHeading content="Um pouco da caminhada" />
+              <Heading content="Nossa História" />
+            </div>
+
+            <div className="space-y-2">
+              <Text>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores hic magnam odio est aliquid earum? Quod est impedit
+                perspiciatis accusamus fugiat, dolor repellendus neque, modi,
+                cupiditate fuga natus praesentium. Debitis.
+              </Text>
+
+              <Text>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores hic magnam odio est aliquid earum? Quod est impedit
+                perspiciatis accusamus fugiat, dolor repellendus neque, modi,
+                cupiditate fuga natus praesentium. Debitis.
+              </Text>
+            </div>
+          </div>
+
+          <div>
+            <StoryAlbum />
+          </div>
+        </MaxWidthContainer>
+      </div>
 
       {/* Courses */}
+      <MaxWidthContainer>
+        <div>
+          <SubHeading content="Os melhores cursos" />
+          <Heading content="Cursos" />
+        </div>
+      </MaxWidthContainer>
 
       {/* Depositions */}
+      <MaxWidthContainer>relatos</MaxWidthContainer>
 
       {/* Frequently asked questions */}
+      <MaxWidthContainer>perguntas</MaxWidthContainer>
 
       {/* CTA */}
+      <MaxWidthContainer>cta</MaxWidthContainer>
     </main>
   )
 }
