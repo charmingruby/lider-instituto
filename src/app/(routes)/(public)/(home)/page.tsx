@@ -7,6 +7,7 @@ import { OffersList } from './_components/offers-list'
 import { SubHeading } from '@/components/sub-heading'
 import { Text } from '@/components/ui/text'
 import { StoryAlbum } from './_components/story-album'
+import { CoursesList } from './_components/courses-list'
 
 export const metadata: Metadata = {
   title: 'Toothache | Melhor instituto de dentistas',
@@ -69,13 +70,13 @@ export default function Home() {
       {/* Story */}
       <div className="border-y border-border bg-muted flex items-center justify-center">
         <MaxWidthContainer className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div>
               <SubHeading content="Um pouco da caminhada" />
               <Heading content="Nossa História" />
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-4">
               <Text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Asperiores hic magnam odio est aliquid earum? Quod est impedit
@@ -99,10 +100,14 @@ export default function Home() {
       </div>
 
       {/* Courses */}
-      <MaxWidthContainer>
+      <MaxWidthContainer className="space-y-6">
         <div>
           <SubHeading content="Os melhores cursos" />
           <Heading content="Cursos" />
+        </div>
+
+        <div>
+          <CoursesList />
         </div>
       </MaxWidthContainer>
 
