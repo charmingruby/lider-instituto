@@ -1,6 +1,6 @@
 export const enterpriseName = 'Instituto Líder'
 
-const phoneNumber = '5532991100990'
+const phoneNumber = '5571991162481'
 const message = 'Olá, estou interessado nos seus serviços.'
 const messageURL = encodeURIComponent(message)
 
@@ -8,7 +8,7 @@ export const whatsappLink = `https://wa.me/${phoneNumber}?text=${messageURL}`
 
 export const mapLink = 'https://maps.app.goo.gl/4qrXUSAxsQfRJ9jG9'
 export const address =
-  'AV. JURACY MAGALHÃES JÚNIOR 374, RIO VERMELHO. SALVADOR – BA.'
+  'Av. Juracy Magalhães Júnior, 374 - Rio Vermelho, Salvador - BA, 40295-140'
 
 export const instagramLink = 'https://www.instagram.com/institutolider/'
 

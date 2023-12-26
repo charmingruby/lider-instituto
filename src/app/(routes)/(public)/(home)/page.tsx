@@ -1,16 +1,24 @@
+/**
+ * External
+ */
+import { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
+
+/**
+ * Internal
+ */
 import { Heading } from '@/components/heading'
 import { Button } from '@/components/ui/button'
 import { MaxWidthContainer } from '@/components/ui/max-width-container'
-import { Metadata } from 'next'
-import Link from 'next/link'
 import { OffersList } from './_components/offers-list'
 import { SubHeading } from '@/components/sub-heading'
 import { Text } from '@/components/ui/text'
 import { StoryAlbum } from './_components/story-album'
 import { CoursesList } from './_components/courses-list'
 import { FAQList } from './_components/faq-list'
-import { Separator } from '@/components/ui/separator'
-import { ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
+import { ContactOptions } from './_components/contact-options'
+import { ContentFrame } from './_components/content-frame'
 
 export const metadata: Metadata = {
   title: 'Toothache | Melhor instituto de dentistas',
@@ -106,7 +114,7 @@ export default function Home() {
       <MaxWidthContainer className="space-y-6">
         <div>
           <SubHeading content="Os melhores cursos" />
-          <Heading content="Cursos" />
+          <Heading content="Conheça nossas formações" />
         </div>
 
         <div>
@@ -118,56 +126,68 @@ export default function Home() {
       <MaxWidthContainer>relatos</MaxWidthContainer>
 
       {/* Frequently asked questions */}
-      <MaxWidthContainer className="space-y-16">
-        <Separator />
+      <MaxWidthContainer>
+        <ContentFrame>
+          <div className="space-y-16">
+            <div className="space-y-8 max-w-2xl mx-auto w-full">
+              <div>
+                <Heading
+                  content="Ficou com dúvidas? Não se preocupe"
+                  className="text-center"
+                />
+              </div>
 
-        <div className="space-y-16">
-          <div className="space-y-8 max-w-2xl mx-auto w-full">
-            <div>
-              <Heading
-                content="Ficou com dúvidas? Não se preocupe"
-                className="text-center"
-              />
+              <div>
+                <FAQList />
+              </div>
             </div>
 
-            <div>
-              <FAQList />
-            </div>
-          </div>
+            <div className="bg-muted p-8 border rounded-md">
+              <div className="max-w-2xl mx-auto w-full flex flex-col items-center text-center">
+                <Headphones className="text-primary w-8 h-8" />
 
-          <div className="bg-muted p-8 border rounded-md">
-            <div className="max-w-2xl mx-auto w-full flex flex-col items-center text-center">
-              <Headphones className="text-primary w-8 h-8" />
+                <h3 className="text-2xl font-semibold mb-6">
+                  Entre em contato
+                </h3>
 
-              <h3 className="text-2xl font-semibold mb-6">Entre em contato</h3>
+                <p className="text-muted-foreground text-base mb-8 leading-normal">
+                  Estamos aqui para ajudar. Entre em contato para suporte
+                  técnico personalizado em nossos produtos e serviços.
+                </p>
 
-              <p className="text-muted-foreground text-base mb-8 leading-normal">
-                Estamos aqui para ajudar. Entre em contato para suporte técnico
-                personalizado em nossos produtos e serviços.
-              </p>
+                <div className="flex flex-col md:flex-row md:justify-center gap-4 w-full">
+                  <Link prefetch={false} href="/" className="w-full md:w-fit">
+                    <Button variant="outline" className="w-full md:w-fit">
+                      WhatsApp <ArrowUpRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
 
-              <div className="flex flex-col md:flex-row md:justify-center gap-4 w-full">
-                <Link prefetch={false} href="/">
-                  <Button variant="outline">
-                    WhatsApp <ArrowUpRight className="h-4 w-4" />
-                  </Button>
-                </Link>
-
-                <Link prefetch={false} href="/">
-                  <Button>
-                    Fale Conosco <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
+                  <Link prefetch={false} href="/" className="w-full md:w-fit">
+                    <Button className="w-full md:w-fit">
+                      Fale Conosco <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <Separator />
+        </ContentFrame>
       </MaxWidthContainer>
 
       {/* CTA */}
-      <MaxWidthContainer></MaxWidthContainer>
+      <MaxWidthContainer className="grid grid-cols-2 gap-12">
+        <div>
+          <div>
+            <Heading content="Venha se profissionalizar com a gente" />
+          </div>
+
+          <div>
+            <ContactOptions />
+          </div>
+        </div>
+
+        <div></div>
+      </MaxWidthContainer>
     </main>
   )
 }

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import logo from '@/assets/img/logo.png'
 import { ArrowUpRight, AtSign, Building, Clock8, Phone } from 'lucide-react'
 import Link from 'next/link'
-import { email, enterpriseName, mapLink } from '@/site'
+import { address, email, enterpriseName, mapLink } from '@/site'
 
 export function BrandPresentation() {
   return (
@@ -20,8 +20,7 @@ export function BrandPresentation() {
         >
           <Building className="h-4 w-4" />
           <small className="items-center text-sm font-medium flex md:gap-2">
-            Avenida Barão do Rio Branco, nº 1871, Sala 613, Centro, Juiz de Fora
-            - MG
+            {address}
             <ArrowUpRight className="w-4 h-4"></ArrowUpRight>
           </small>
         </Link>
@@ -35,7 +34,7 @@ export function BrandPresentation() {
         {/* Phone */}
         <div className="flex items-center gap-2">
           <Phone className="h-4 w-4" />
-          <small className="text-sm font-medium">(32) 988344973</small>
+          <small className="text-sm font-medium">(71) 99116-2481</small>
         </div>
 
         {/* Time */}

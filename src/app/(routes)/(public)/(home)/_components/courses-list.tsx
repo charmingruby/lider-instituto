@@ -12,7 +12,7 @@ import { Clock, Play } from 'lucide-react'
 
 export function CoursesList() {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-8">
       {courses.map(({ title, subcourses }) => (
         <div key={title} className="space-y-4">
           <div className="space-y-2">
