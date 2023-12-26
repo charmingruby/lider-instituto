@@ -8,6 +8,9 @@ import { SubHeading } from '@/components/sub-heading'
 import { Text } from '@/components/ui/text'
 import { StoryAlbum } from './_components/story-album'
 import { CoursesList } from './_components/courses-list'
+import { FAQList } from './_components/faq-list'
+import { Separator } from '@/components/ui/separator'
+import { ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Toothache | Melhor instituto de dentistas',
@@ -115,10 +118,56 @@ export default function Home() {
       <MaxWidthContainer>relatos</MaxWidthContainer>
 
       {/* Frequently asked questions */}
-      <MaxWidthContainer>perguntas</MaxWidthContainer>
+      <MaxWidthContainer className="space-y-16">
+        <Separator />
+
+        <div className="space-y-16">
+          <div className="space-y-8 max-w-2xl mx-auto w-full">
+            <div>
+              <Heading
+                content="Ficou com dúvidas? Não se preocupe"
+                className="text-center"
+              />
+            </div>
+
+            <div>
+              <FAQList />
+            </div>
+          </div>
+
+          <div className="bg-muted p-8 border rounded-md">
+            <div className="max-w-2xl mx-auto w-full flex flex-col items-center text-center">
+              <Headphones className="text-primary w-8 h-8" />
+
+              <h3 className="text-2xl font-semibold mb-6">Entre em contato</h3>
+
+              <p className="text-muted-foreground text-base mb-8 leading-normal">
+                Estamos aqui para ajudar. Entre em contato para suporte técnico
+                personalizado em nossos produtos e serviços.
+              </p>
+
+              <div className="flex flex-col md:flex-row md:justify-center gap-4 w-full">
+                <Link prefetch={false} href="/">
+                  <Button variant="outline">
+                    WhatsApp <ArrowUpRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+
+                <Link prefetch={false} href="/">
+                  <Button>
+                    Fale Conosco <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Separator />
+      </MaxWidthContainer>
 
       {/* CTA */}
-      <MaxWidthContainer>cta</MaxWidthContainer>
+      <MaxWidthContainer></MaxWidthContainer>
     </main>
   )
 }

@@ -24,7 +24,7 @@ interface Course {
 
 const courses: Course[] = [
   {
-    title: 'Cursos de Especialização',
+    title: 'Especialização',
     subcourses: [
       {
         title: 'Especialização em Ortodontia',
@@ -101,7 +101,7 @@ const courses: Course[] = [
     ],
   },
   {
-    title: 'Cursos de Atualização',
+    title: 'Atualização',
     subcourses: [
       {
         title: 'Atualização em Cirurgia Oral e Plástica Periodontal',
@@ -139,7 +139,7 @@ const courses: Course[] = [
     ],
   },
   {
-    title: 'Cursos de Mini-Residência',
+    title: 'Mini-Residência',
     subcourses: [
       {
         title: 'Mini-Residência em Harmonização Orofacial',
