@@ -7,7 +7,7 @@ interface HeadingProps {
 
 export function SubHeading({ content, className }: HeadingProps) {
   return (
-    <h2 className={cn('text-sm text-gray-400 font-medium', className)}>
+    <h2 className={cn('text-base text-gray-400 font-medium', className)}>
       <span className="text-primary text-base">-</span> {content}
     </h2>
   )

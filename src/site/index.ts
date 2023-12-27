@@ -1,6 +1,9 @@
 export const enterpriseName = 'Instituto Líder'
 
 const phoneNumber = '5571991162481'
+export const formattedPhoneNumber = '+55 (71) 99116-2481'
+export const formattedLandlineNumber = '+55 (71) 3347-4450'
+
 const message = 'Olá, estou interessado nos seus serviços.'
 const messageURL = encodeURIComponent(message)
 

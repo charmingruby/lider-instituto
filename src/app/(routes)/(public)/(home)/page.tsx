@@ -19,6 +19,7 @@ import { CoursesList } from './_components/courses-list'
 import { FAQList } from './_components/faq-list'
 import { ContactOptions } from './_components/contact-options'
 import { ContentFrame } from './_components/content-frame'
+import { ImagesMosaic } from './_components/images-mosaic'
 
 export const metadata: Metadata = {
   title: 'Toothache | Melhor instituto de dentistas',
@@ -49,7 +50,7 @@ export default function Home() {
                 prefetch={false}
                 className="flex justify-center"
               >
-                <Button color="primary" className="w-full text-base">
+                <Button variant="outline" className="w-full text-base">
                   Soluções
                 </Button>
               </Link>
@@ -58,9 +59,7 @@ export default function Home() {
                 prefetch={false}
                 className="flex justify-center"
               >
-                <Button color="secondary" className="w-full text-base">
-                  Entre em contato
-                </Button>
+                <Button className="w-full text-base">Entre em contato</Button>
               </Link>
             </div>
           </div>
@@ -144,7 +143,7 @@ export default function Home() {
 
             <div className="bg-muted p-8 border rounded-md">
               <div className="max-w-2xl mx-auto w-full flex flex-col items-center text-center">
-                <Headphones className="text-primary w-8 h-8" />
+                <Headphones className="text-primary w-8 h-8 mb-3" />
 
                 <h3 className="text-2xl font-semibold mb-6">
                   Entre em contato
@@ -176,17 +175,30 @@ export default function Home() {
 
       {/* CTA */}
       <MaxWidthContainer className="grid grid-cols-2 gap-12">
-        <div>
+        <div className="flex flex-col justify-center">
           <div>
             <Heading content="Venha se profissionalizar com a gente" />
           </div>
 
-          <div>
+          <div className="my-8">
             <ContactOptions />
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <small className="text-sm text-muted-foreground">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              voluptatum ut impedit? Qui reprehenderit possimus, expedita
+              necessitatibus tenetur culpa, a libero deleniti ex eius excepturi
+              quae maxime doloremque porro cupiditate!
+            </small>
+
+            <Button className="w-full md:w-fit">Começar agora</Button>
           </div>
         </div>
 
-        <div></div>
+        <div>
+          <ImagesMosaic />
+        </div>
       </MaxWidthContainer>
     </main>
   )
