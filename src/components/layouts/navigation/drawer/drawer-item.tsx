@@ -3,9 +3,9 @@
 import Link from 'next/link'
 import { useContext } from 'react'
 
-import { NavItemProps } from '../../../../../../content/nav-items-list'
 import { MenuContext } from '@/contexts/menu-context'
 import { ChevronRight } from 'lucide-react'
+import { NavItemProps } from '@/content/nav-items-list'
 
 export function DrawerItem({ icon: Icon, label, url }: NavItemProps) {
   const { toggleMenu } = useContext(MenuContext)
