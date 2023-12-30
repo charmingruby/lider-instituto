@@ -3,7 +3,7 @@
  */
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
+import { ArrowDown, ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
 
 /**
  * Internal
@@ -20,6 +20,7 @@ import { FAQList } from './_components/faq-list'
 import { ContactOptions } from './_components/contact-options'
 import { ContentFrame } from './_components/content-frame'
 import { ImagesMosaic } from './_components/images-mosaic'
+import { TestimonialsList } from './_components/testimonials-list'
 
 export const metadata: Metadata = {
   title: 'Toothache | Melhor instituto de dentistas',
@@ -51,7 +52,7 @@ export default function Home() {
                 className="flex justify-center"
               >
                 <Button variant="outline" className="w-full text-base">
-                  Soluções
+                  Cursos
                 </Button>
               </Link>
               <Link
@@ -88,17 +89,23 @@ export default function Home() {
 
             <div className="space-y-4">
               <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores hic magnam odio est aliquid earum? Quod est impedit
-                perspiciatis accusamus fugiat, dolor repellendus neque, modi,
-                cupiditate fuga natus praesentium. Debitis.
+                O Instituto Líder iniciou suas atividades no ano de 2004, com o
+                intuito de difundir uma nova filosofia de ensino nas mais
+                diversas especialidades odontológicas. Com uma visão
+                multidisciplinar, utilizando-se de técnicas inovadoras,
+                materiais de última geração e um corpo clínico formado por
+                mestres e doutores, tornou-se referência no segmento de
+                pós-graduação na Bahia.
               </Text>
 
               <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores hic magnam odio est aliquid earum? Quod est impedit
-                perspiciatis accusamus fugiat, dolor repellendus neque, modi,
-                cupiditate fuga natus praesentium. Debitis.
+                Nosso instituto encontra-se localizado no bairro do Rio
+                Vermelho, em sede própria, com excelente localização e fácil
+                estacionamento. Dotada de ampla estrutura, composta por salas de
+                aulas climatizadas, clínica com 12 consultórios, ampla recepção,
+                sala de Rx, sala de esterilização e laboratório de prótese.
+                Somado a isso, temos um amplo corpo técnico-administrativo,
+                treinado para melhor atendê-lo (a).
               </Text>
             </div>
           </div>
@@ -121,8 +128,22 @@ export default function Home() {
         </div>
       </MaxWidthContainer>
 
-      {/* Depositions */}
-      <MaxWidthContainer>relatos</MaxWidthContainer>
+      {/* Testimonial */}
+      <MaxWidthContainer>
+        <div>
+          <div className="flex items-center">
+            <Heading content="Eles conquistaram seus objetivos de carreira e transformaram suas vidas" />
+            <div>
+              <span>O próximo depoimento pode ser seu!</span>
+              <ArrowDown />
+            </div>
+          </div>
+
+          <div>
+            <TestimonialsList />
+          </div>
+        </div>
+      </MaxWidthContainer>
 
       {/* Frequently asked questions */}
       <MaxWidthContainer>
