@@ -3,7 +3,7 @@
  */
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowDown, ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Headphones } from 'lucide-react'
 
 /**
  * Internal
@@ -130,13 +130,10 @@ export default function Home() {
 
       {/* Testimonial */}
       <MaxWidthContainer>
-        <div>
-          <div className="flex items-center">
+        <div className="space-y-6">
+          <div className=" mx-auto w-full">
+            <SubHeading content="Venha ser o próximo" />
             <Heading content="Eles conquistaram seus objetivos de carreira e transformaram suas vidas" />
-            <div>
-              <span>O próximo depoimento pode ser seu!</span>
-              <ArrowDown />
-            </div>
           </div>
 
           <div>

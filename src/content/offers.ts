@@ -25,31 +25,29 @@ const offers: Offer[] = [
     icon: Cuboid,
     title: 'Estrutura de Ponta',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita ratione cupiditate. Doloremque officia id facilis, nihil ratione veniam recusandae nobis est aperiam, blanditiis enim natus provident alias modi ex!',
+      'Valorizamos uma estrutura que agregue positivamente aos nossos alunos.',
   },
   {
     icon: Users2,
     title: 'Professores Qualificados',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita ratione cupiditate. Doloremque officia id facilis, nihil ratione veniam recusandae nobis est aperiam, blanditiis enim natus provident alias modi ex!',
+    description: 'Nossa coordenação é composta de mestres e doutores.',
   },
   {
     icon: Hand,
     title: 'Técnicas Atualizadas',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita ratione cupiditate. Doloremque officia id facilis, nihil ratione veniam recusandae nobis est aperiam, blanditiis enim natus provident alias modi ex!',
+    description: 'Sempre estamos alinhados com o que há de novo no mercado.',
   },
   {
     icon: Syringe,
     title: 'Práticas Clínicas',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita ratione cupiditate. Doloremque officia id facilis, nihil ratione veniam recusandae nobis est aperiam, blanditiis enim natus provident alias modi ex!',
+      'Damos a oportunidade ao aluno de aplicar todo o conhecimento obtido durante o curso.',
   },
   {
     icon: DollarSign,
     title: 'Planos Acessíveis',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita ratione cupiditate. Doloremque officia id facilis, nihil ratione veniam recusandae nobis est aperiam, blanditiis enim natus provident alias modi ex!',
+      'Disponibilizamos diversos planos de pagamento para nossos cursos.',
   },
 ]
 
