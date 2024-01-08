@@ -21,6 +21,8 @@ import { ContactOptions } from './_components/contact-options'
 import { ContentFrame } from './_components/content-frame'
 import { ImagesMosaic } from './_components/images-mosaic'
 import { TestimonialsList } from './_components/testimonials-list'
+import { Separator } from '@/components/ui/separator'
+import { whatsappLink } from '@/site'
 
 export const metadata: Metadata = {
   title: 'Toothache | Melhor instituto de dentistas',
@@ -31,7 +33,10 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <div className="hero-img flex items-center sm:pt-16 bg-no-repeat bg-center bg-fixed md:min-h-screen sm:text-left">
+      <div
+        id="hero"
+        className="hero-img flex items-center sm:pt-16 bg-no-repeat bg-center bg-fixed md:min-h-screen sm:text-left"
+      >
         <MaxWidthContainer>
           <div className="z-10 mt-16 sm:mt-0 w-full md:max-w-2xl flex flex-col justify-center ">
             {/* Title */}
@@ -68,7 +73,7 @@ export default function Home() {
       </div>
 
       {/* Why to choose */}
-      <MaxWidthContainer>
+      <MaxWidthContainer id="o-que-oferecemos">
         <div>
           <SubHeading content="Nosso melhor" className="text-center" />
           <Heading content="O que oferecemos" className="text-center" />
@@ -80,7 +85,10 @@ export default function Home() {
 
       {/* Story */}
       <div className="border-y border-border bg-muted flex items-center justify-center">
-        <MaxWidthContainer className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <MaxWidthContainer
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          id="historia"
+        >
           <div className="space-y-6">
             <div>
               <SubHeading content="Um pouco da caminhada" />
@@ -117,7 +125,7 @@ export default function Home() {
       </div>
 
       {/* Courses */}
-      <MaxWidthContainer className="space-y-6">
+      <MaxWidthContainer id="cursos" className="space-y-6">
         <div>
           <SubHeading content="Os melhores cursos" />
           <Heading content="Conheça nossas formações" />
@@ -129,7 +137,7 @@ export default function Home() {
       </MaxWidthContainer>
 
       {/* Testimonial */}
-      <MaxWidthContainer>
+      <MaxWidthContainer id="relatos">
         <div className="space-y-6">
           <div className=" mx-auto w-full">
             <SubHeading content="Venha ser o próximo" />
@@ -173,13 +181,22 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-col md:flex-row md:justify-center gap-4 w-full">
-                  <Link prefetch={false} href="/" className="w-full md:w-fit">
+                  <Link
+                    prefetch={false}
+                    href={whatsappLink}
+                    target="_blank"
+                    className="w-full md:w-fit"
+                  >
                     <Button variant="outline" className="w-full md:w-fit">
                       WhatsApp <ArrowUpRight className="h-4 w-4" />
                     </Button>
                   </Link>
 
-                  <Link prefetch={false} href="/" className="w-full md:w-fit">
+                  <Link
+                    prefetch={false}
+                    href="#contato"
+                    className="w-full md:w-fit"
+                  >
                     <Button className="w-full md:w-fit">
                       Fale Conosco <ArrowRight className="h-4 w-4" />
                     </Button>
@@ -192,25 +209,31 @@ export default function Home() {
       </MaxWidthContainer>
 
       {/* CTA */}
-      <MaxWidthContainer className="grid grid-cols-2 gap-12">
+      <MaxWidthContainer
+        id="contato"
+        className="grid grid-cols-1 md:grid-cols-2 gap-12"
+      >
         <div className="flex flex-col justify-center">
           <div>
+            <SubHeading content="Seja nosso aluno" />
             <Heading content="Venha se profissionalizar com a gente" />
           </div>
 
-          <div className="my-8">
+          <div className="mt-8 mb-4 flex flex-col gap-4">
+            <Separator />
             <ContactOptions />
+            <Separator />
           </div>
 
-          <div className="flex flex-col gap-4">
-            <small className="text-sm text-muted-foreground">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-              voluptatum ut impedit? Qui reprehenderit possimus, expedita
-              necessitatibus tenetur culpa, a libero deleniti ex eius excepturi
-              quae maxime doloremque porro cupiditate!
-            </small>
+          <div className="flex flex-col">
+            <p className="mt-4 text-muted-foreground leading-relaxed text-sm">
+              Mande uma mensagem para nossa equipe para ingressar nos nossos
+              cursos.
+            </p>
 
-            <Button className="w-full md:w-fit">Começar agora</Button>
+            <Link prefetch={false} href={whatsappLink}>
+              <Button className="w-full md:w-fit mt-4">Começar agora</Button>
+            </Link>
           </div>
         </div>
 

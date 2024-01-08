@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <MenuContextProvider>
         <body
-          className={`${montserrat.className} min-h-screen antialiased bg-background text-foreground`}
+          className={`${montserrat.className} min-h-screen antialiased bg-background text-foreground scroll-smooth`}
         >
           {children}
           <ContactWidget />

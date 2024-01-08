@@ -13,8 +13,8 @@ export const navItemsList: NavItemProps[] = [
     label: 'Início',
     url: '/',
   },
-  { icon: Gem, label: 'O que oferecemos', url: '/' },
-  { icon: BookHeart, label: 'Nossa história', url: '/' },
-  { icon: Library, label: 'Cursos', url: '/' },
-  { icon: MessageSquareQuote, label: 'Relatos', url: '/' },
+  { icon: Gem, label: 'O que oferecemos', url: '#o-que-oferecemos' },
+  { icon: BookHeart, label: 'Nossa história', url: '#historia' },
+  { icon: Library, label: 'Cursos', url: '#cursos' },
+  { icon: MessageSquareQuote, label: 'Relatos', url: '#relatos' },
 ]
