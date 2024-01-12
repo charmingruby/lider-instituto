@@ -129,7 +129,7 @@ const courses: Course[] = [
     ],
   },
   {
-    title: 'Mini-Residência',
+    title: 'Residência',
     subcourses: [
       {
         title: 'Residência em Harmonização Orofacial',
