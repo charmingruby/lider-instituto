@@ -52,7 +52,7 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row gap-3">
               <Link
-                href="/relatos"
+                href="#cursos"
                 prefetch={false}
                 className="flex justify-center"
               >
@@ -61,7 +61,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link
-                href="/contato"
+                href="#contato"
                 prefetch={false}
                 className="flex justify-center"
               >

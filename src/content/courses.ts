@@ -117,16 +117,6 @@ const courses: Course[] = [
         ],
       },
       {
-        title: 'Atualização em Endodontia',
-        durationInMonths: 10,
-        type: [
-          SubcourseTypes.theoric,
-          SubcourseTypes.practice,
-          SubcourseTypes.lab,
-        ],
-        coordination: [{ name: 'Dra. Simone Tosta' }],
-      },
-      {
         title: 'Atualização em Dentística',
         durationInMonths: 10,
         type: [
@@ -142,7 +132,7 @@ const courses: Course[] = [
     title: 'Mini-Residência',
     subcourses: [
       {
-        title: 'Mini-Residência em Harmonização Orofacial',
+        title: 'Residência em Harmonização Orofacial',
         durationInMonths: 6,
         type: [
           SubcourseTypes.theoric,
